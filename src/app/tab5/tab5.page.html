@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Convertor crypto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row justify-content-center margin-bottom>
+      <ion-img src="assets/imgs/xrp.png" style="height: 250px"></ion-img>
+    </ion-row>
+   
+      <ng-template #loading>
+        <h1> Loading...</h1>
+      </ng-template >
+  </ion-grid>
+
+  
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-label>Select Fiat Currency</ion-label>
+    <ion-select [(ngModel)]="fiat" (ionChange)="getRipplePrice()">
+      <ion-select-option value="USD">USD</ion-select-option>
+      <ion-select-option value="EUR">EUR</ion-select-option>
+      <ion-select-option value="TND">TND</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Stacked Label</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+</ion-footer>
